@@ -122,9 +122,9 @@
           	<p>username</p>
               <input type="text" name="username" class="input_shadow"/>
               <p>password</p>
-              <input type="text" name="password" />
+              <input type="password" name="password" />
               <p>password (repeat)</p>
-              <input type="text" name="password_repeat" />
+              <input type="password" name="password_repeat" />
               <p>email</p>
               <input type="text" name="email" />
               <p><input type="submit" name="submit" id="submit" value="register" />

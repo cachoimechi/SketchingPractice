@@ -1,3 +1,8 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 html,
 body,
 div,
@@ -86,6 +91,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+/* HTML5 display-role reset for older browsers */
 article,
 aside,
 details,
@@ -124,21 +130,31 @@ table {
 /* Font Face */
 @font-face {
   font-family: 'ChunkFiveRegular';
-  src: url("../../fonts/Chunkfive-webfont.eot");
-  src: url("../../fonts/Chunkfive-webfont.eot?#iefix") format('embedded-opentype'), url("../../fonts/Chunkfive-webfont.woff") format('woff'), url("../../fonts/Chunkfive-webfont.ttf") format('truetype'), url("../../fonts/Chunkfive-webfont.svg#ChunkFiveRegular") format('svg');
-  font-weight: normal;
+  src: url('../../fonts/Chunkfive-webfont.eot');
+  src: url('../../fonts/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'), url('../../fonts/Chunkfive-webfont.woff') format('woff'), url('../../fonts/Chunkfive-webfont.ttf') format('truetype'), url('../../fonts/Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');
+  font-weight: 100;
   font-style: normal;
   line-spacing: 1px;
 }
 /* Basic Styles */
-body,
 html {
-  height: 100%;
-  background: #218cb8;
+  background: #292929;
+}
+body {
+  background: #218cb8 url(../../img/bg_texture.gif);
 }
 h1 {
   font-family: 'ChunkFiveRegular', sans-serif;
   font-size: 2.1em;
+}
+h2 {
+  font-family: 'ChunkFiveRegular', sans-serif;
+  font-size: 1.3em;
+}
+h3 {
+  font-family: 'ChunkFiveRegular', sans-serif;
+  font-size: 1.1em;
+  color: white;
 }
 p {
   line-height: 23px;
@@ -149,6 +165,7 @@ p {
   margin: auto;
   width: 960px;
   margin-top: 100px;
+  overflow: hidden;
 }
 .link {
   display: block;
@@ -156,13 +173,16 @@ p {
   width: 100%;
 }
 .box_shadow {
-  -webkit-box-shadow: 3px 3px 20px 0px #000;
-  -moz-box-shadow: 3px 3px 20px 0px #000;
-  box-shadow: 3px 3px 20px 0px #000;
+  -webkit-box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+}
+.span_white {
+  color: white;
 }
 /* Nav */
 nav {
-  background: url("../../img/nav_bg.jpg") repeat-x;
+  background: url(../../img/nav_bg.jpg) repeat-x;
   height: 100px;
   width: 100%;
   position: fixed;
@@ -174,7 +194,7 @@ nav {
   margin: auto;
 }
 #logo {
-  background: url("../../img/logo.png") no-repeat;
+  background: url(../../img/logo.png) no-repeat;
   height: 61px;
   margin-top: 20px;
   margin-left: 15px;
@@ -182,7 +202,7 @@ nav {
   width: 500px;
 }
 #tour {
-  background: url("../../img/tour.png") top;
+  background: url(../../img/tour.png) top;
   margin-top: 10px;
   float: left;
   height: 76px;
@@ -190,10 +210,10 @@ nav {
   margin-left: 75px;
 }
 #tour:hover {
-  background: url("../../img/tour.png") no-repeat bottom;
+  background: url(../../img/tour.png) no-repeat bottom;
 }
 #register {
-  background: url("../../img/register.png") no-repeat top;
+  background: url(../../img/register.png) no-repeat top;
   float: left;
   height: 78px;
   width: 119px;
@@ -201,10 +221,10 @@ nav {
   margin-left: 30px;
 }
 #register:hover {
-  background: url("../../img/register.png") no-repeat bottom;
+  background: url(../../img/register.png) no-repeat bottom;
 }
 #login {
-  background: url("../../img/login.png") no-repeat top;
+  background: url(../../img/login.png) no-repeat top;
   float: left;
   height: 78px;
   width: 85px;
@@ -212,7 +232,7 @@ nav {
   margin-left: 30px;
 }
 #login:hover {
-  background: url("../../img/login.png") no-repeat bottom;
+  background: url(../../img/login.png) no-repeat bottom;
 }
 /* Content */
 #drop_register_form {
@@ -220,7 +240,7 @@ nav {
   position: fixed;
   top: 100;
   margin-left: 615px;
-  background: #fff;
+  background: white;
   padding: 10px;
 }
 #drop_login_form {
@@ -228,18 +248,18 @@ nav {
   position: fixed;
   top: 100;
   margin-left: 750px;
-  background: #fff;
+  background: white;
   padding: 10px;
 }
 .arrow {
-  background: url("../../img/arrow.png") no-repeat;
+  background: url(../../img/arrow.png) no-repeat;
   height: 10px;
   width: 15px;
   margin-top: -18px;
   margin-left: 120px;
 }
 .tour_bar {
-  background: url("../../img/tour_bar_bg.jpg") repeat-x;
+  background: url(../../img/tour_bar_bg.jpg) repeat-x;
   height: 53px;
   width: 960px;
   overflow: hidden;
@@ -256,19 +276,19 @@ nav {
   color: #555;
   margin-top: 15px;
   text-decoration: none;
-  text-shadow: #333 -1px -1px, rgba(0,0,0,0.30) 0 -1px, #fff 0 1px;
+  text-shadow: #333333 -1px -1px, rgba(0, 0, 0, 0.3) 0 -1px, #ffffff 0 1px;
 }
 .tour_bar a:hover {
   color: #218cb8;
 }
 .slide {
-  background: url("../../img/cork_bg.jpg") no-repeat;
+  background: url(../../img/cork_bg.jpg) no-repeat;
   height: 667px;
   width: 960px;
   overflow: hidden;
 }
 #welcome {
-  background: url("../../img/cork_bg.jpg") no-repeat;
+  background: url(../../img/cork_bg.jpg) no-repeat;
   overflow: hidden;
 }
 .image {
@@ -288,7 +308,7 @@ nav {
   margin-left: 25px;
 }
 .sticky {
-  background: #ff9;
+  background: #FF9;
   float: left;
   height: 250px;
   width: 265px;
@@ -297,7 +317,7 @@ nav {
   padding: 10px;
 }
 .sticky_long {
-  background: #ff9;
+  background: #FF9;
   float: left;
   height: 250px;
   width: 345px;
@@ -308,17 +328,16 @@ nav {
 #top_slide {
   height: 344px;
   width: 946px;
+  margin: auto;
   margin-top: 10px;
-  margin-right: auto;
-  margin-bottom: auto;
-  margin-left: auto;
-  background: url("../../img/top_slide.png") no-repeat;
+  margin-bottom: 50px;
+  background: url(../../img/top_slide.png) no-repeat;
 }
 #timer_slide {
   display: none;
 }
 #timer_header {
-  background: url("../../img/timer_header.png") no-repeat;
+  background: url(../../img/timer_header.png) no-repeat;
   height: 157px;
   width: 444px;
   margin-top: 10px;
@@ -328,7 +347,7 @@ nav {
   display: none;
 }
 #community_header {
-  background: url("../../img/community_header.png") no-repeat;
+  background: url(../../img/community_header.png) no-repeat;
   height: 141px;
   width: 643px;
   margin-top: 10px;
@@ -338,7 +357,7 @@ nav {
   display: none;
 }
 #content_header {
-  background: url("../../img/content_header.png") no-repeat;
+  background: url(../../img/content_header.png) no-repeat;
   height: 148px;
   width: 539px;
   margin-top: 10px;
@@ -348,7 +367,7 @@ nav {
   display: none;
 }
 #register_header {
-  background: url("../../img/register_header.png") no-repeat;
+  background: url(../../img/register_header.png) no-repeat;
   height: 142px;
   width: 396px;
   margin-top: 10px;
@@ -367,27 +386,23 @@ nav {
   height: 289px;
   width: 297px;
   float: left;
-  background: url("../../img/pink-sticky.png") no-repeat;
+  background: url(../../img/pink-sticky.png) no-repeat;
   margin-top: 50px;
-  -moz-transition: all 1s ease;
   -webkit-transition: all 1s ease;
-  -o-transition: all 1s ease;
+  -moz-transition: all 1s ease;
   transition: all 1s ease;
 }
 #pink_sticky:hover {
-  -moz-transition: all 1s ease;
   -webkit-transition: all 1s ease;
-  -o-transition: all 1s ease;
+  -moz-transition: all 1s ease;
   transition: all 1s ease;
-  -ms-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
-  -o-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
   transform: rotate(360deg);
 }
 #register_form {
   width: 250px;
-  background: #fff;
+  background: white;
   float: right;
   padding: 0px 10px;
   margin-right: 30px;
@@ -402,35 +417,100 @@ form p {
 form input {
   width: 245px;
   height: 20px;
-  -webkit-box-shadow: inset -5px 5px 10px 0px #ccc;
-  -moz-box-shadow: inset -5px 5px 10px 0px #ccc;
-  box-shadow: inset -5px 5px 10px 0px #ccc;
+  -webkit-box-shadow: inset -5px 5px 10px 0px #cccccc 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset -5px 5px 10px 0px #cccccc 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset -5px 5px 10px 0px #cccccc 1px 2px rgba(0, 0, 0, 0.1);
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
 #submit {
   height: 30px;
   width: 100px;
   background: #218cb8;
-  color: #fff;
+  color: white;
   font-size: 17px;
   margin-top: 5px;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+  -webkit-box-shadow: none 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: none 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: none 1px 2px rgba(0, 0, 0, 0.1);
 }
 #submit:hover {
-  background: #1a7093;
+  background: #114a62;
+}
+#main {
+  height: 100px;
+  width: 960px;
+  background: #DDD;
+  border: 1px solid #FFF;
+  -webkit-border-top-right-radius: 5;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 5;
+  -moz-border-radius-topright: 5;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 5;
+  border-top-right-radius: 5;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 5;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  margin-top: 20px;
+  padding: 10px;
 }
 /* Footer */
 footer {
-  background-color: #292929;
-  background-image: -webkit-linear-gradient(top, #292929 0%, #444 100%);
-  background-image: -moz-linear-gradient(top, #292929 0%, #444 100%);
-  background-image: -ms-linear-gradient(top, #292929 0%, #444 100%);
-  background-image: -o-linear-gradient(top, #292929 0%, #444 100%);
-  background-image: linear-gradient(top, #292929 0%, #444 100%);
-  height: 100%;
+  background: #292929;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #292929), color-stop(1, #444444));
+  background: -ms-linear-gradient(bottom, #292929, #444444);
+  background: -moz-linear-gradient(center bottom, #292929 0%, #444444 100%);
   width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+}
+#footer_container {
+  width: 960px;
+  margin: auto;
+}
+#copyright {
+  height: 375px;
+  width: 400px;
+  color: white;
+  float: left;
+  border-right: 1px solid black;
+  padding-right: 50px;
+}
+#copyright p {
+  color: #AAA;
+  margin: 10px 0;
+}
+#about_footer {
+  height: 375px;
+  width: 450px;
+  float: left;
+  color: white;
+  border-left: 1px solid #777;
+  padding-left: 50px;
+}
+#about_footer h2 {
+  margin-bottom: 10px;
+}
+#about_img {
+  float: left;
+  border: 5px solid white;
+  margin-right: 15px;
+}
+#about_footer p {
+  color: #AAA;
+  margin-bottom: 10px;
+}
+#about_footer a,
+#about_footer a:visited {
+  color: white;
 }
