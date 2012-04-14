@@ -1,8 +1,10 @@
 <?php
-
-/***********************
-Classes
-***********************/
+/***********************************************
+File: class.inc.php
+Author: Adam Krone
+Description: Includes all classes used in the
+SketchingPractice.com site.
+***********************************************/
 
 	//USER MANAGEMENT
 	class User {

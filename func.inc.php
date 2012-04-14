@@ -6,10 +6,6 @@ Description: Includes all functions used in the
 SketchingPractice.com site.
 ***********************************************/
 
-/***********************
-Functions
-***********************/
-
 	//Sanitize Strings
 	function sanitize($string) {
 		$sanitized = trim(strip_tags(addslashes($string)));
