@@ -461,13 +461,14 @@ form input {
   padding: 5px 10px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
-  border-radius: 8px;
+  border-radius: 15px;
   -webkit-box-shadow: #000000 0 1px 0;
   -moz-box-shadow: #000000 0 1px 0;
   box-shadow: #000000 0 1px 0;
   text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
   color: white;
-  font-size: 14px;
+  border: 1px solid black;
+  font-size: 18px;
   font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
   text-decoration: none;
   vertical-align: middle;
@@ -476,6 +477,7 @@ form input {
   border-top-color: #ffffff;
   background: #ffffff;
   color: #000000;
+  border: 1px solid black;
 }
 #main {
   width: 960px;
