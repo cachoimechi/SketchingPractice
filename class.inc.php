@@ -118,4 +118,96 @@ SketchingPractice.com site.
 			$mydb->close();
 		
 		}
+
+		//Change Password
+		function changePassword($userid, $oldPassword, $newPassword) {
+
+			//sanitize strings
+			$oldPassword = sanitize($oldPassword);
+			$newPassword = sanitize($newPassword);
+
+			//encrypt password
+			$newPassword = md5($newPassword);
+
+			//return values
+			$nomatch = "<h3>The old password you specified does not match our records.</h3><div class=\"padding\">";
+			$success = "<h3>Password successfully changed!</h3><div class=\"padding\">";
+			$failure = "<h3>Error: Please try again later</h3><div class=\"padding\">";
+
+			//query db
+			include "db.inc.php";
+			$sql = "SELECT * FROM users WHERE user_id = '$userid'";
+			$result = $mydb->query($sql);
+			$checkPassword = $result->fetch_assoc();
+
+			//check if passwords match
+			if ( $checkPassword['password'] == md5($oldPassword) ) {
+
+				$sql = "UPDATE users SET password = '$newPassword' WHERE user_id = '$userid' ";
+
+				//error handling
+				if($mydb->query($sql) == TRUE) {
+
+					return $success;
+
+				} else {
+
+					return $failure;
+
+				}
+
+			//passwords do not match
+			} else {
+
+				return $nomatch;
+
+			}
+
+			$result->close();
+
+			$mydb->close();
+
+		}
+
+		//Change Email
+		function changeEmail($userid, $email) {
+
+			//sanitize strings
+			$email = sanitize($email);
+
+			//return values
+			$success = "<h3>Email updated successfully!</h3><div class=\"padding\">";
+			$failure = "<h3>Error: Please try again later.</h3><div class=\"padding\">";
+
+			//query db
+			include "db.inc.php";
+			$sql = "UPDATE users SET email = '$email' WHERE user_id = '$userid'";
+
+			//error handling
+			if($mydb->query($sql) == TRUE) {
+
+				return $success;
+
+			} else {
+
+				return $failure;
+
+			}
+
+			$mydb->close();
+
+		}
+
+		//Get username
+		function getUser($userid) {
+
+			//query db
+			include "db.inc.php";
+			$sql = "SELECT * FROM users WHERE user_id = '$userid'";
+			$result = $mydb->query($sql);
+			$row = $result->fetch_assoc();
+			
+			return $row;
+
+		}
 	}

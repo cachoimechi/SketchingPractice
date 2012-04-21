@@ -25,7 +25,7 @@
       <input type="password" name="password_repeat" />
       <p>email</p>
       <input type="text" name="email" />
-      <p><input type="submit" name="submit" id="submit" value="register" />
+      <p><input class="submit" type="submit" name="submit" id="submit" value="register" />
     </form>
     <form id="drop_login_form" class="box_shadow" method="post" action="login.php">
       <div class="arrow"></div>
@@ -33,7 +33,7 @@
       <input type="text" name="username" class="input_shadow"/>
       <p>password</p>
       <input type="password" name="password" />
-      <p><input type="submit" name="submit" id="submit" value="login" />
+      <p><input class="submit" type="submit" name="submit" id="submit" value="login" />
     </form>
   	<div id="welcome" class="slide">
   	  <div id="top_slide"></div>
@@ -127,7 +127,7 @@
               <input type="password" name="password_repeat" />
               <p>email</p>
               <input type="text" name="email" />
-              <p><input type="submit" name="submit" id="submit" value="register" />
+              <p><input class="submit" type="submit" name="submit" id="submit" value="register" />
           </form>
       </div>
     </div>

@@ -1,8 +1,8 @@
 <?php
 /***********************************
-File: login.php
+File: change_email.php
 Author: Adam Krone
-Description: Handles user login.
+Description: Handles user email changes.
 ***********************************/
 
 session_start();
@@ -10,11 +10,11 @@ session_start();
 require "func.inc.php";
 require "class.inc.php";
 
-$username = $_POST['username'];
-$password = $_POST['password'];
+$email = $_POST['email'];
 
 $user = new User();
-$output = $user->login($username, $password);
+$output = $user->changeEmail($_SESSION['user_id'], $email);
+$output .= redirect("account.php");
 
 ?>
 

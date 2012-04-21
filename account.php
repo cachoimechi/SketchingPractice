@@ -9,6 +9,10 @@ Description: Homepage for registered members.
 	
 	include "auth.inc.php";
 	require "func.inc.php";
+	require "class.inc.php";
+
+	$user = new User();
+	$info = $user->getUser($_SESSION['user_id']);
 	
 ?>
 
@@ -18,7 +22,6 @@ Description: Homepage for registered members.
 	<meta charset="utf-8">
 	<title>Sketching Practice | Members Area</title>
 	<link href="style/css/style.css" rel="stylesheet" type="text/css" />
-	<link href="slider/slider.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <nav>
@@ -30,51 +33,50 @@ Description: Homepage for registered members.
 <div id="container">
 	<div id="main">
 		<div id="content">
-			<?php echo "<h1>Welcome back, " . $_SESSION['username'] . "!</h1>"; ?>
-
-			<!--Begin Slider-->
-		<a id="arrowLeft" href="#">&lt;&lt;</a>
-    	<a id="arrowRight" href="#">&gt;&gt;</a>
-		<div id="sliderWrap">
-			<ul id="slider">
-				<li class="slider_slide">
-					<h2>Slide 1</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				</li>
-				<li class="slider_slide">
-					<h2>Slide 2</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				</li>
-				<li class="slider_slide">
-					<h2>Slide 3</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				</li>
-			</ul>
-		</div>
-		<!--End Slider-->
-
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<h1>Account Management</h1>
+			<div id="forms">	
+				<div id="user_info">
+					<h2>User Information</h2>
+					<p><strong>username:</strong> <?php echo $info['username']; ?></p>
+					<p><strong>email:</strong> <?php echo $info['email']; ?></p>
+				</div>
+				<form id="change_email_form" class="form" action="change_email.php" method="post">
+				
+					<h4>Change Email</h4>
+					
+					<p>Email</p>
+					<p><input type="text" name="email"></p>
+					
+					<p><input class="submit" type="submit" name="submit" value="Submit!"></p>
+				
+				</form>
+				<form id="change_password_form" class="form" action="change_password.php" method="post">
+							
+					<h4>Change Password</h4>
+					
+					<p>Old Password</p>
+					<p><input type="password" name="old_password"></p>
+					
+					<p>New Password</p>
+					<p><input type="password" name="new_password"></p>
+					
+					<p>Repeat New Password</p>
+					<p><input type="password" name="repeat_password"></p>
+					
+					<p><input class="submit" type="submit" name="submit" value="Submit!"></p>
+				
+				</form>	
+			</div>
 		</div>
 		<div id="sidebar">
-				<h2>Sidebar</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			</div>
+			<h2>Sidebar</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
 	</div>
 </div> <!-- End Container -->
 <footer>
@@ -95,8 +97,5 @@ Description: Homepage for registered members.
       </div>
     </div>
   </footer> <!-- End Footer -->
-<!--Scripts-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script src="slider/slider.js"></script>
 </body>
 </html>
