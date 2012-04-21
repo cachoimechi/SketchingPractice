@@ -59,7 +59,7 @@
       </div>
       <div class="sticky box_shadow">
       	<h1>Learn Together</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <p>You don't have to learn alone. Learn from others and motivate each other to become better. As you grow, pass on the knowledge that helped you when you were starting out.</p>
       </div>
     </div>
     <div class="tour_bar">

@@ -146,7 +146,6 @@ body {
 h1 {
   font-family: 'ChunkFiveRegular', sans-serif;
   font-size: 2.1em;
-  width: 960px;
 }
 h2 {
   font-family: 'ChunkFiveRegular', sans-serif;
@@ -165,6 +164,7 @@ p {
   line-height: 23px;
   font-family: "Ludica Grande", sans-serif;
   color: #333;
+  margin-bottom: 10px;
 }
 strong {
   font-weight: bold;
@@ -264,6 +264,7 @@ nav a:hover {
   margin-left: 615px;
   background: white;
   padding: 10px;
+  z-index: 2;
 }
 #drop_login_form {
   display: none;
@@ -272,6 +273,7 @@ nav a:hover {
   margin-left: 750px;
   background: white;
   padding: 10px;
+  z-index: 2;
 }
 .arrow {
   background: url(../../img/arrow.png) no-repeat;
@@ -498,7 +500,7 @@ form input {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  margin-top: 20px;
+  margin: 20px 0;
   overflow: hidden;
 }
 #content {
