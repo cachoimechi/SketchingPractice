@@ -1,8 +1,8 @@
 <?php
 /***********************************************
-File: members.php
+File: timer.php
 Author: Adam Krone
-Description: Homepage for registered members.
+Description: Timer utility.
 ***********************************************/
 
 	session_start();
@@ -16,7 +16,7 @@ Description: Homepage for registered members.
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Sketching Practice | Members Area</title>
+	<title>Sketching Practice | The Timer</title>
 	<link href="style/css/style.css" rel="stylesheet" type="text/css" />
 	<link href="slider/slider.css" rel="stylesheet" type="text/css">
 </head>
@@ -30,26 +30,8 @@ Description: Homepage for registered members.
 <div id="container">
 	<div id="main">
 		<div id="content">
-			<?php echo "<h1>Welcome back, " . $_SESSION['username'] . "!</h1>"; ?>
-			<p>Your homepage has been customized with news and information related to your interests. To update or make changes to these or
-				any of your user settings, manage your account <a href="account.php">here</a>.</p>
-			<!--Begin Slider-->
-		<a id="arrowLeft" href="#"></a>
-    	<a id="arrowRight" href="#"></a>
-		<div id="sliderWrap">
-			<ul id="slider">
-				<li class="slider_slide">
-					<iframe width="500" height="284" src="http://www.youtube.com/embed/Lgg8ebwk4MQ" frameborder="0" allowfullscreen></iframe>
-				</li>
-				<li class="slider_slide">
-					<iframe width="500" height="284" src="http://www.youtube.com/embed/M2p_ZxhXii0" frameborder="0" allowfullscreen></iframe>
-				</li>
-				<li class="slider_slide">
-					<iframe width="500" height="284" src="http://www.youtube.com/embed/Kbd5A6wHoLo" frameborder="0" allowfullscreen></iframe>
-				</li>
-			</ul>
-		</div>
-		<!--End Slider-->
+			<h1>The Timer</h1>
+			<hr>
 			<h2>Content 1</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

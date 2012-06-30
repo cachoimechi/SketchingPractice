@@ -21,7 +21,7 @@ Description: Handles user logout.
 		<title>SketchingPractice.com | Logout</title>
 		<link href="style/css/style.css" rel="stylesheet" type="text/css" />
 	</head>
-	<body>
+	<body class="transition_box">
 	
 		<div id="redirect">
 				<?php echo $output; ?>

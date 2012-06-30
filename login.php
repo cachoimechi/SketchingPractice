@@ -25,7 +25,7 @@ $output = $user->login($username, $password);
 	<title>SketchingPractice.com | User Login</title>
 	<link href="style/css/style.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body class="transition_box">
 
 	<div id="redirect">
 		<?php echo $output; ?>
